@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Шаблон класу Circle
 template <typename T>
 class Circledw
 {
@@ -10,7 +9,7 @@ protected:
 public:
     Circledw() {
         cout << "Circle constructor" << endl;
-        diameter = T(2); // за замовчуванням
+        diameter = T(2);
     }
 
     Circledw(T value) {
@@ -27,7 +26,6 @@ public:
     }
 };
 
-// Шаблон класу Square
 template <typename T>
 class Squaredw
 {
@@ -35,7 +33,7 @@ protected:
     T size;
 public:
     Squaredw() {
-        size = T(1); // за замовчуванням
+        size = T(1); 
         cout << "Square constructor" << endl;
     }
 
@@ -77,8 +75,8 @@ public:
 
 int main() {
     Circledw<int> circle(5);  
-    Squaredw<int> square(10); // Створюємо квадрат зі стороною 10
-    CircleInSquaredw<int> circleInSquare(15); // Створюємо коло, вписане в квадрат з параметром 15
+    Squaredw<int> square(10); 
+    CircleInSquaredw<int> circleInSquare(15); 
 
     cout << endl;
     circle.get_value();
