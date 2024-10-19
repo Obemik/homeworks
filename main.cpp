@@ -1,27 +1,50 @@
 #include <iostream>
 using namespace std;
 
-namespace Cats {
-    class Cat {
+namespace AnimalsBase {
+    class Animal {
     protected:
         string _name;
         string _type;
         int _age;
     public:
-        Cat() {
+        Animal() {
             _name = "No name";
-            _type = "Cat";
+            _type = "No type";
             _age = -1;
+            cout << "Animal created" << endl;
+        }
+        Animal(string name, string type, int age) {
+            _name = name;
+            _type = type;
+            _age = age;
+            cout << "Animal created with param" << endl;
+        }
+
+        virtual void about() {
+            cout << "Name: " << _name << endl;
+            cout << "Type: " << _type << endl;
+            cout << "Age: " << _age << endl;
+        }
+
+        virtual ~Animal() {
+            cout << "Animal destroyed" << endl;
+        }
+    };
+}
+
+namespace Cats {
+    class Cat : public AnimalsBase::Animal {
+    public:
+        Cat() : Animal() {
+            _type = "Cat";
             cout << "Cat created" << endl;
         }
-        Cat(string name, int age) {
-            _name = name;
-            _type = "Cat";
-            _age = age;
+        Cat(string name, int age) : Animal(name, "Cat", age) {
             cout << "Cat created with param" << endl;
         }
 
-        void about() {
+        void about() override {
             cout << "Name: " << _name << endl;
             cout << "Type: " << _type << endl;
             cout << "Age: " << _age << endl;
@@ -34,26 +57,17 @@ namespace Cats {
 }
 
 namespace Dogs {
-    class Dog {
-    protected:
-        string _name;
-        string _type;
-        int _age;
+    class Dog : public AnimalsBase::Animal {
     public:
-        Dog() {
-            _name = "No name";
+        Dog() : Animal() {
             _type = "Dog";
-            _age = -1;
             cout << "Dog created" << endl;
         }
-        Dog(string name, int age) {
-            _name = name;
-            _type = "Dog";
-            _age = age;
+        Dog(string name, int age) : Animal(name, "Dog", age) {
             cout << "Dog created with param" << endl;
         }
 
-        void about() {
+        void about() override {
             cout << "Name: " << _name << endl;
             cout << "Type: " << _type << endl;
             cout << "Age: " << _age << endl;
@@ -66,26 +80,17 @@ namespace Dogs {
 }
 
 namespace Parrots {
-    class Parrot {
-    protected:
-        string _name;
-        string _type;
-        int _age;
+    class Parrot : public AnimalsBase::Animal {
     public:
-        Parrot() {
-            _name = "No name";
+        Parrot() : Animal() {
             _type = "Parrot";
-            _age = -1;
             cout << "Parrot created" << endl;
         }
-        Parrot(string name, int age) {
-            _name = name;
-            _type = "Parrot";
-            _age = age;
+        Parrot(string name, int age) : Animal(name, "Parrot", age) {
             cout << "Parrot created with param" << endl;
         }
 
-        void about() {
+        void about() override {
             cout << "Name: " << _name << endl;
             cout << "Type: " << _type << endl;
             cout << "Age: " << _age << endl;
