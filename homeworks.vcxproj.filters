@@ -9,5 +9,46 @@
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="appointment.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="database.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="doctor.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="medical_record.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="patient.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="appointment.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="libs.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="database.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="doctor.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="medical_record.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="patient.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>main</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

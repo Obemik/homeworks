@@ -127,7 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="appointment.cpp" />
+    <ClCompile Include="database.cpp" />
+    <ClCompile Include="doctor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="medical_record.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="patient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="appointment.h" />
+    <ClInclude Include="database.h" />
+    <ClInclude Include="doctor.h" />
+    <ClInclude Include="libs.h" />
+    <ClInclude Include="medical_record.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="patient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
