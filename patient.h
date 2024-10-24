@@ -15,8 +15,8 @@ class Patient {
 
 public:
     Patient(const std::string& name, int age, Gender gender, const std::string& patientID, const std::string& address);
-    std::string getPatientID() const; // Додано
-    void displayInfo() const; // Додано
+    std::string getPatientID() const; 
+    void displayInfo() const; 
 };
 
 #endif // PATIENT_H
