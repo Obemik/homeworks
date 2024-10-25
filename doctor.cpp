@@ -16,9 +16,9 @@ Doctor::~Doctor() {
 }
 
 const char* Doctor::getDoctorID() const {
-    return _doctorID; // Додано
+    return _doctorID; 
 }
 
 void Doctor::showInfo() const {
-    std::cout << "Name: " << _name << ", Specialization: " << _specialization << ", Doctor ID: " << _doctorID << std::endl; // Додано
+    std::cout << "Name: " << _name << ", Specialization: " << _specialization << ", Doctor ID: " << _doctorID << std::endl; 
 }

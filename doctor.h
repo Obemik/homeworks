@@ -12,8 +12,8 @@ class Doctor {
 public:
     Doctor(const char* name, const char* specialization, const char* doctorID);
     ~Doctor();
-    const char* getDoctorID() const; // Додано
-    void showInfo() const; // Додано
+    const char* getDoctorID() const; 
+    void showInfo() const; 
 };
 
 #endif // DOCTOR_H

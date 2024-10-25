@@ -4,7 +4,7 @@ Patient::Patient(const std::string& name, int age, Gender gender, const std::str
     : name(name), age(age), gender(gender), patientID(patientID), address(address) {}
 
 std::string Patient::getPatientID() const {
-    return patientID; // Додано
+    return patientID;
 }
 
 void Patient::displayInfo() const {

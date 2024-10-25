@@ -2,29 +2,35 @@
 #include "libs.h"
 
 char* myStrcpy(char* destination, const char* source) {
-    char* originalDestination = destination; // Зберігаємо адресу початку destination
-
-    while (*source != '\0') { // Копіюємо до символу закінчення рядка
-        *destination = *source; // Копіюємо символ
-        destination++; // Переходимо до наступної позиції в destination
-        source++; // Переходимо до наступного символу в source
+    char* originalDestination = destination; 
+    while (*source != '\0') { 
+        *destination = *source; 
+        destination++;
+        source++; 
     }
 
-    *destination = '\0'; // Додаємо символ закінчення рядка
-    return originalDestination; // Повертаємо початкову адресу destination
+    *destination = '\0'; 
+    return originalDestination; 
 }
 
 
 MedicalRecord::MedicalRecord(const char* diseaseName, const char* treatmentPlan, const char* diagnosisDate, const char* doctorID) {
-    _diseaseName = new char[strlen(diseaseName) + 1];
-    myStrcpy(_diseaseName, diseaseName);
-    _treatmentPlan = new char[strlen(treatmentPlan) + 1];
-    myStrcpy(_treatmentPlan, treatmentPlan);
-    _diagnosisDate = new char[strlen(diagnosisDate) + 1];
-    myStrcpy(_diagnosisDate, diagnosisDate);
-    _doctorID = new char[strlen(doctorID) + 1];
-    myStrcpy(_doctorID, doctorID);
+    try {
+        _diseaseName = new char[strlen(diseaseName) + 1];
+        myStrcpy(_diseaseName, diseaseName);
+        _treatmentPlan = new char[strlen(treatmentPlan) + 1];
+        myStrcpy(_treatmentPlan, treatmentPlan);
+        _diagnosisDate = new char[strlen(diagnosisDate) + 1];
+        myStrcpy(_diagnosisDate, diagnosisDate);
+        _doctorID = new char[strlen(doctorID) + 1];
+        myStrcpy(_doctorID, doctorID);
+    }
+    catch (const std::bad_alloc& e) {
+        std::cerr << "Memory allocation failed: " << e.what() << std::endl;
+        throw; 
+    }
 }
+
 MedicalRecord::~MedicalRecord() {
     delete[] _diseaseName;
     delete[] _treatmentPlan;
