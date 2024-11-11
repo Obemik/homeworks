@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <locale>  // Для підключення кирилиці
+#include <locale> 
 
 using namespace std;
 
@@ -141,7 +141,7 @@ public:
 };
 
 int main() {
-    setlocale(LC_ALL, "");  // Включає підтримку кирилиці
+    setlocale(LC_ALL, ""); 
 
     DictionaryTree dict;
 
